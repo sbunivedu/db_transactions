@@ -1,0 +1,6 @@
+CREATE TABLE User(
+  ID INT PRIMARY KEY,
+  Name CHAR(8)
+) ENGINE=InnoDB;
+
+INSERT INTO User VALUES (2, 'bill');
