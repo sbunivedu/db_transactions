@@ -18,10 +18,10 @@ UPDATE accounts
 SET balance = balance + 1000
 WHERE account_no = 200;
 
-INSERT INTO account_changes(account_no,flag,amount,changed_at) 
+INSERT INTO account_changes(account_no,flag,amount,changed_at)
 VALUES(100,'-',1000,datetime('now'));
 
-INSERT INTO account_changes(account_no,flag,amount,changed_at) 
+INSERT INTO account_changes(account_no,flag,amount,changed_at)
 VALUES(200,'+',1000,datetime('now'));
 
 COMMIT;
@@ -53,7 +53,7 @@ UPDATE accounts
 SET balance = balance - 20000
 WHERE account_no = 100;
 
-INSERT INTO account_changes(account_no,flag,amount,changed_at) 
+INSERT INTO account_changes(account_no,flag,amount,changed_at)
 VALUES(100,'-',20000,datetime('now'));
 
 COMMIT;
@@ -93,7 +93,7 @@ SELECT * FROM User WHERE ID=2;
 |  2 | bill |
 +----+------+
                                     -- session 2
-                                    SET TRANSACTION ISOLATION LEVEL READ COMMITTED
+                                    SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
                                     START TRANSACTION;
                                     SELECT * FROM User WHERE ID=2;
                                     +----+------+
@@ -104,7 +104,7 @@ UPDATE User SET Name='bob' WHERE ID=2;
                                     +----+------+
                                     |  2 | bob  |
                                     +----+------+
-                                    
+
 ```
 
 * "repeatable read" isolation level indeed guaranties repeatable read.
