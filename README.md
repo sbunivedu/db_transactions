@@ -36,7 +36,7 @@ SELECT * FROM accounts;
 |        200 |   11100 |
 +------------+---------+
 
- SELECT * FROM account_changes;
+SELECT * FROM account_changes;
 +-----------+------------+------+--------+---------------------+
 | change_no | account_no | flag | amount | changed_at          |
 +-----------+------------+------+--------+---------------------+
